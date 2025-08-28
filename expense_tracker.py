@@ -9,7 +9,5 @@ def remove_expense(category, index):
     if category in expenses and 0 <= index < len(expenses[category]):
         expenses[category].pop(index)
 
-def total_expense(category):
-    if category in expenses:
-        return sum(expenses[category])
-    return 0
+def total_all_expenses():
+    return sum(sum(vals) for vals in expenses.values())
