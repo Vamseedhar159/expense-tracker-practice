@@ -8,6 +8,8 @@ def add_expense(category, amount):
 def remove_expense(category, index):
     if category in expenses and 0 <= index < len(expenses[category]):
         expenses[category].pop(index)
+    else:
+        raise IndexError("Invalid expense index")
 
 def total_expense(category):
     if category in expenses:
