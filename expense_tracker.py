@@ -13,5 +13,5 @@ def remove_expense(category, index):
     else:
         raise IndexError("Invalid expense index")
 
-def total_all_expenses():
+def total_expense():
     return sum(sum(vals) for vals in expenses.values())
